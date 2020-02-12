@@ -55,9 +55,7 @@ class Wp_Scss {
   public function compile() {
       global $scssc, $cache;
       $cache = WPSCSS_PLUGIN_DIR . '/cache/';
-      if (! is_dir($cache)) {
-          mkdir( $cache, 0755 );
-      }
+
       //Compiler - Takes scss $in and writes compiled css to $out file
       // catches errors and puts them the object's compiled_errors property
       function compiler($in, $out, $instance) {
